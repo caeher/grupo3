@@ -1,14 +1,20 @@
 {{ id }}
-<div class = "card">
+<div class = "card" style="marging: -60px; margin-left: -170px; margin-right: -170px;">
 
 <div class = "card-body">
-<div>
-    {{> buttons
-    type="success"
-    message="Buscar"
-    nativeType="subtmi"}}
+<div class = "relative" style = "height: 50px;">
 
-    <h1>Resumen</h1>
+    <div class = "float-start">
+        <h3>Resumen</h3>
+    </div>
+
+    <div  class  = "float-end">
+        {{> buttons 
+            type="success"
+            message="Exportar"
+            nativeType="subtmi"}}
+    </div>
+     
 </div>
 
 <div class="text-center">
@@ -16,10 +22,12 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic iste quisquam optio distinctio eligendi perspiciatis
         voluptas cupiditate mollitia illo? Perspiciatis quam vero at, recusandae quaerat facilis incidunt iure obcaecati
         vel!</p>
+        <br><br>
 
-    <h2>Nombre de la sección 1</h2>
+    <h3>Nombre de la sección 1</h3>
     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias dolores odit optio, sunt ut eos modi vitae
         repudiandae quam doloribus architecto minima, voluptatum dicta amet, voluptates fugiat eveniet rerum reiciendis.
+        <br><br>
     </p>
 
 </div>
@@ -27,15 +35,15 @@
 
 <ol>
 
-    <li>¿Esta es la pregunta 1?</li>
-    <ul style="list-style-type:none;">
+    <li style="font-weight:bold;">¿Esta es la pregunta 1?</li>
+    <ul style="list-style-type:none; margin: 10px;">
 
-        <li>Respuesta 1</li>
-        <li>Respuesta 2</li>
-        <li>Respuesta 3</li>
+        <li style="margin: 20px; margin-left: -40px;">Respuesta 1</li>
+        <li style="margin: 20px; margin-left: -40px;">Respuesta 2</li>
+        <li style="margin: 20px; margin-left: -40px;">Respuesta 3</li>
 
     </ul>
-    <li>¿Esta es la pregunta 2?</li>
+    <li style="font-weight:bold;">¿Esta es la pregunta 2?</li>
 
 </ol>
 

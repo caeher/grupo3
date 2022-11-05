@@ -1,6 +1,7 @@
-export const prueba =
+export const verEncuestas =
 [ 
-    
+    {
+    "prueba":[
     {
         "_id": "63620fcc30df5d8459d259ff",
         "nombre": "Encuesta 1",
@@ -24,5 +25,5 @@ export const prueba =
         "createdAt": "2022-11-02T06:35:56.856Z",
         "updatedAt": "2022-11-02T06:35:56.856Z",
         "__v": 0
-    }
+    }]}
 ]

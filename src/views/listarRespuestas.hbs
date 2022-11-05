@@ -1,5 +1,7 @@
 <div class="text-center">
     <h1>Ver Respuestas de las encuestas</h1>
+   
+    
 </div>
 <div class="card mt-5">
   <div class="card-body">
@@ -11,7 +13,7 @@
         placeholder="Recipient's username"
         aria-label="Recipient's username"
         aria-describedby="button-addon2"
-      />
+      />  
       {{> buttons
         type="success"
         message="Buscar"
@@ -35,18 +37,33 @@
 
   <tbody>
 
+    <h1>
+      {{data.nombre}}
+      {{data._id}}
+    </h1>
+
+       {{#each data.prueba as |pregunta|}}
     <tr>
-      <th><p class="text-center"> Sistemas embebidos </p></th>
-      <th> {{> buttons
-              message="Ver Respuesta"
-              type = "success"
+      <th><p>{{pregunta.nombre}}</p></th>
+      <th> 
+        {{> buttons
+              message= "Ver respuestas"
+              type= "success"
               tag = "a"
-              href = "#b"
-              
-        }} 
+              href= (link "pregunta._id")
+        }}
       </th>
     </tr>
-    <tr>
+    {{/each}}
+     
+
+    </tr>
+    {{!--
+    {
+   {{!--   <tr>
+
+                    href=(link "/respuestas" pregunta._id)></href>
+
       <th><p class="text-center"> Zonas rurales</p> </th>
       <th> {{> buttons
               message="Ver Respuesta"
@@ -69,6 +86,7 @@
 
   
   
+    </tr> --}}
   </tbody>
 
 </table>

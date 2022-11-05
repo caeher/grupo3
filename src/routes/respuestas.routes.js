@@ -1,5 +1,6 @@
 import { Router} from "express";
 import { verEncuestas } from "../utils/prueba.js";
+import { prueba } from "../utils/datos.js";
 
 const router = Router();
 
@@ -8,7 +9,7 @@ const router = Router();
 router.get("/", (req, res) => {
 	res.render('listarRespuestas', {
 		layout: "dashboard",
-		data: verEncuestas
+		data: verEncuestas[0]
 	});
 });
 

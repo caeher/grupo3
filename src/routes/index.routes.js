@@ -8,10 +8,11 @@ import usuariosRoutes from "./usuarios.routes.js";
 
 
 const router = Router();
-//router.get("/prueba", (req, res) =>{
 
+router.use(urlencoded({
+    extended: true
+}));
   
-
 
 
 router.get("/", (req, res) => {

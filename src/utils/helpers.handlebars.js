@@ -10,3 +10,8 @@ export function json (context) {
 export function global(key) {
     return globalData[key];
 }
+
+export function link (...options){
+    options.pop();
+    return options.join("/");
+}

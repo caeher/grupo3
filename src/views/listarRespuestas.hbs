@@ -1,5 +1,7 @@
 <div class="text-center">
     <h1>Ver Respuestas de las encuestas</h1>
+    <h1>{{data.nombre}}</h1>
+    
 </div>
 <div class="card mt-5">
   <div class="card-body">
@@ -29,18 +31,22 @@
     </tr>
   </thead>
   <tbody>
+    {{#each data as |pregunta|}}
     <tr>
-      <th><p class="text-center"> Sistemas embebidos </p></th>
-      <th> {{> buttons
-              message="Ver Respuesta"
-              type = "success"
-              tag = "a"
-              href = "#b"
-              
-        }} 
-      </th>
+      <td><p class="text-center"> {{data}} </p></td>
+      <td> 
+        {{> buttons
+            message="Ver encuesta"
+            type= "success"
+            tag = "a"
+            href=(link "/respuestas" pregunta._id)
+        }}
+      </td>
     </tr>
+    {{/each}}
     <tr>
+
+       {{!--  
       <th><p class="text-center"> Zonas rurales</p> </th>
       <th> {{> buttons
               message="Ver Respuesta"
@@ -59,7 +65,7 @@
               tag = "a"
               href = "#b"
         }} </th>
-    </tr>
+    </tr> --}}
   </tbody>
 </table>
   </div>

@@ -1,10 +1,14 @@
 import { Router} from "express";
+import { data } from "jquery";
+import { prueba } from "../utils/prueba.js";
+
 const router = Router();
 
 // Rutas Modulo 5
 router.get("/", (req, res) => {
 	res.render('listarRespuestas', {
-		layout: "dashboard"
+		layout: "dashboard",
+		data: prueba[0]
 	});
 });
 

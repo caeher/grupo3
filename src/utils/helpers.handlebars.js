@@ -10,3 +10,4 @@ export function json (context) {
 export function global(key) {
     return globalData[key];
 }
+

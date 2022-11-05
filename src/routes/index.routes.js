@@ -1,12 +1,18 @@
 import { Router, urlencoded } from "express";
 import encuentasRoutes from "./encuestas.routes.js";
-import preguntasRoutes from "./preguntas.routes.js"
-import respuestasRoutes from "./respuestas.routes.js"
-import seccionesRoutes from "./secciones.routes.js"
-import usuariosRoutes from "./usuarios.routes.js"
+import preguntasRoutes from "./preguntas.routes.js";
+import respuestasRoutes from "./respuestas.routes.js";
+import seccionesRoutes from "./secciones.routes.js";
+import usuariosRoutes from "./usuarios.routes.js";
+
+
 
 const router = Router();
-//
+//router.get("/prueba", (req, res) =>{
+
+  
+
+
 
 router.get("/", (req, res) => {
     res.render('index');

@@ -47,6 +47,57 @@
 
 </ol>
 
+<div class="chart-container" style="position: relative; left: 80px; height:300px; width:300px">
+    
+  <canvas id="myChart"></canvas>
+  
+</div>
+
+<script>
+    Chart.defaults.font.size = 20;
+const data = {
+  labels: [
+    'Respuesta 1',
+    'Respuesta 2',
+    'Respuesta 3',
+  ],
+  
+  datasets: [{
+    label: 'Mi primer conjunto de datos',
+    data: [300, 50, 100],
+    backgroundColor: [
+      'rgb(220, 33, 64)',
+      'rgb(76, 33, 218)',
+      'rgb(255, 165, 0)'
+    ],
+    hoverOffset: 4
+  }]
+};</script>
+
+<script>
+    const config = {
+  type: 'pie',
+  data: data,
+
+};
+</script>
+<script>
+    module.exports = {
+  actions: [],
+  config: config,
+};
+</script>
+
+
+    <script>
+        
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+      
+    );
+  </script>
+
 </div>
 
 
